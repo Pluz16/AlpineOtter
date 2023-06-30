@@ -49,44 +49,39 @@ class DogController extends Controller
 }
 
 
-    public function edit($id)
-    {
-        // Trova il cane dal database
-        $dog = Dog::findOrFail($id);
-        
-        // Mostra il form per la modifica del cane
-        return view('dogs.edit', compact('dog'));
-    }
+public function edit($id)
+{
+    $dog = Dog::findOrFail($id);
+    return view('dogs.edit', compact('dog'));
+}
 
     public function update(Request $request, $id)
     {
-        // Valida i dati del form
+        $dog = Dog::findOrFail($id);
+
+        // Validazione dei campi
         $validatedData = $request->validate([
             'name' => 'required|string',
             'pedigree' => 'required|string',
             'birthdate' => 'required|date',
-            // Aggiungi altre validazioni per i campi desiderati
+            'photo' => 'nullable|image',
+            'owner_id' => 'nullable|exists:owners,id',
+            'description' => 'nullable|string',
         ]);
 
-        // Trova il cane dal database
-        $dog = Dog::findOrFail($id);
-
-        // Aggiorna i dati del cane
+        // Aggiornamento dei campi del cane
         $dog->update($validatedData);
 
-        // Redirect alla pagina di visualizzazione del cane aggiornato
-        return redirect()->route('dogs.show', $dog->id);
+        // Redirezione alla pagina di visualizzazione dei cani o altre azioni
+        return redirect()->route('dogs.index')->with('success', 'Cane aggiornato con successo!');
     }
 
     public function destroy($id)
     {
-        // Trova il cane dal database
         $dog = Dog::findOrFail($id);
-        
-        // Elimina il cane
         $dog->delete();
 
-        // Redirect alla pagina di elenco dei cani
-        return redirect()->route('dogs.index');
+        // Redirezione alla pagina di visualizzazione dei cani o altre azioni
+        return redirect()->route('dogs.index')->with('success', 'Cane eliminato con successo!');
     }
 }
