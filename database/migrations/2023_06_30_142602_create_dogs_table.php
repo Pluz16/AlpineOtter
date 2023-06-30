@@ -15,6 +15,7 @@ class CreateDogsTable extends Migration
             $table->string('photo')->nullable();
             $table->unsignedBigInteger('owner_id')->nullable();
             $table->foreign('owner_id')->references('id')->on('owners')->onDelete('set null');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
