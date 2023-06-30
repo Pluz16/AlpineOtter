@@ -23,21 +23,31 @@ class DogController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // Valida i dati del form
-        $validatedData = $request->validate([
-            'name' => 'required|string',
-            'pedigree' => 'required|string',
-            'birthdate' => 'required|date',
-            // Aggiungi altre validazioni per i campi desiderati
-        ]);
+{
+    // Valida i dati del modulo
+    $validatedData = $request->validate([
+        'name' => 'required|string',
+        'pedigree' => 'required|string',
+        'birthdate' => 'required|date',
+        'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'owner_id' => 'nullable|exists:owners,id',
+        'description' => 'nullable|string',
+    ]);
 
-        // Crea un nuovo cane nel database
-        $dog = Dog::create($validatedData);
+    // Salva il cane nel database
+    $dog = Dog::create($validatedData);
 
-        // Redirect alla pagina di visualizzazione del cane appena creato
-        return redirect()->route('dogs.show', $dog->id);
+    // Carica l'immagine del cane se presente
+    if ($request->hasFile('photo')) {
+        $photoPath = $request->file('photo')->store('dog-photos');
+        $dog->photo = $photoPath;
+        $dog->save();
     }
+
+    // Reindirizza all'elenco dei cani con un messaggio di successo
+    return redirect()->route('dogs.index')->with('success', 'Cane creato con successo.');
+}
+
 
     public function edit($id)
     {
