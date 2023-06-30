@@ -2,83 +2,81 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dog;
 use Illuminate\Http\Request;
 
 class DogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        // Logica per ottenere tutti i cani dal database
+        $dogs = Dog::all();
+        
+        // Passa i cani alla vista dogs.index
+        return view('dogs.index', compact('dogs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        // Mostra il form per la creazione di un nuovo cane
+        return view('dogs.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        // Valida i dati del form
+        $validatedData = $request->validate([
+            'name' => 'required|string',
+            'pedigree' => 'required|string',
+            'birthdate' => 'required|date',
+            // Aggiungi altre validazioni per i campi desiderati
+        ]);
+
+        // Crea un nuovo cane nel database
+        $dog = Dog::create($validatedData);
+
+        // Redirect alla pagina di visualizzazione del cane appena creato
+        return redirect()->route('dogs.show', $dog->id);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        // Trova il cane dal database
+        $dog = Dog::findOrFail($id);
+        
+        // Mostra il form per la modifica del cane
+        return view('dogs.edit', compact('dog'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        // Valida i dati del form
+        $validatedData = $request->validate([
+            'name' => 'required|string',
+            'pedigree' => 'required|string',
+            'birthdate' => 'required|date',
+            // Aggiungi altre validazioni per i campi desiderati
+        ]);
+
+        // Trova il cane dal database
+        $dog = Dog::findOrFail($id);
+
+        // Aggiorna i dati del cane
+        $dog->update($validatedData);
+
+        // Redirect alla pagina di visualizzazione del cane aggiornato
+        return redirect()->route('dogs.show', $dog->id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        // Trova il cane dal database
+        $dog = Dog::findOrFail($id);
+        
+        // Elimina il cane
+        $dog->delete();
+
+        // Redirect alla pagina di elenco dei cani
+        return redirect()->route('dogs.index');
     }
 }
