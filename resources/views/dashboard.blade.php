@@ -23,4 +23,23 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Dogs</h5>
+                    <h2 class="card-text">{{ $totalDogs }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Owners</h5>
+                    <h2 class="card-text">{{ $totalOwners }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
