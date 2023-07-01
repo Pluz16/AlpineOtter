@@ -11,6 +11,17 @@
                         <form method="POST" action="{{ route('dogs.store') }}" enctype="multipart/form-data">
                             @csrf
 
+
+                            <div class="form-group">
+                                <label for="images">Immagini</label>
+                                <input id="images" type="file" class="form-control-file @error('images') is-invalid @enderror" name="images[]" multiple>
+                                @error('images')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
 

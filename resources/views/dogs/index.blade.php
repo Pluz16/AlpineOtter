@@ -10,6 +10,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Photos</th>
                         <th>Name</th>
                         <th>Pedigree</th>
                         <th>Birthdate</th>
@@ -20,10 +21,18 @@
                 <tbody>
                     @foreach ($dogs as $dog)
                         <tr>
+                        <td>
+                            @if (isset($dog->photos))
+                                @foreach ($dog->photos as $photo)
+                                    <img src="{{ asset($photo->path) }}" alt="Dog Photo" width="100">
+                                @endforeach
+                            @endif
+                        </td>
                             <td>{{ $dog->name }}</td>
                             <td>{{ $dog->pedigree }}</td>
                             <td>{{ $dog->birthdate }}</td>
-                            <td>{{ $dog->owner->name }}</td>
+                            <td>{{ $dog->owner ? $dog->owner->name : 'No Owner' }}</td>
+                            
                             <td>
                                 <a href="{{ route('dogs.edit', $dog->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                 <form action="{{ route('dogs.destroy', $dog->id) }}" method="POST" class="d-inline">

@@ -9,13 +9,14 @@ use App\Models\Owner;
 class DogController extends Controller
 {
     public function index()
-    {
-        // Logica per ottenere tutti i cani dal database
-        $dogs = Dog::all();
-        
-        // Passa i cani alla vista dogs.index
-        return view('dogs.index', compact('dogs'));
-    }
+{
+    // Logica per ottenere tutti i cani dal database
+    $dogs = Dog::all();
+    
+    // Passa i cani alla vista dogs.index
+    return view('dogs.index', compact('dogs'));
+}
+
 
     public function create()
 {
@@ -24,14 +25,14 @@ class DogController extends Controller
 }
 
 
-    public function store(Request $request)
+public function store(Request $request)
 {
     // Valida i dati del modulo
     $validatedData = $request->validate([
+        'photos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'name' => 'required|string',
         'pedigree' => 'required|string',
         'birthdate' => 'required|date',
-        'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'owner_id' => 'nullable|exists:owners,id',
         'description' => 'nullable|string',
     ]);
@@ -39,11 +40,13 @@ class DogController extends Controller
     // Salva il cane nel database
     $dog = Dog::create($validatedData);
 
-    // Carica l'immagine del cane se presente
-    if ($request->hasFile('photo')) {
-        $photoPath = $request->file('photo')->store('dog-photos');
-        $dog->photo = $photoPath;
-        $dog->save();
+    // Carica le immagini del cane se presenti
+    if ($request->hasFile('photos')) {
+        $photos = $request->file('photos');
+        foreach ($photos as $photo) {
+            $photoPath = $photo->store('dog-photos');
+            $dog->photos()->create(['path' => $photoPath]);
+        }
     }
 
     // Reindirizza all'elenco dei cani con un messaggio di successo
@@ -51,11 +54,15 @@ class DogController extends Controller
 }
 
 
+
 public function edit($id)
 {
     $dog = Dog::findOrFail($id);
-    return view('dogs.edit', compact('dog'));
+    $owners = Owner::all();
+    return view('dogs.edit', compact('dog', 'owners'));
 }
+
+
 
     public function update(Request $request, $id)
     {
@@ -63,10 +70,10 @@ public function edit($id)
 
         // Validazione dei campi
         $validatedData = $request->validate([
+            'photos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required|string',
             'pedigree' => 'required|string',
             'birthdate' => 'required|date',
-            'photo' => 'nullable|image',
             'owner_id' => 'nullable|exists:owners,id',
             'description' => 'nullable|string',
         ]);
