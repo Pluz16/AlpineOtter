@@ -19,16 +19,20 @@ class OwnerController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // Validazione dei dati del form
+{
+    $validatedData = $request->validate([
+        'name' => 'required|string',
+        'email' => 'required|email|unique:owners',
+    ]);
 
-        $owner = new Owner();
-        $owner->name = $request->input('name');
-        $owner->email = $request->input('email');
-        $owner->save();
+    $owner = new Owner();
+    $owner->name = $validatedData['name'];
+    $owner->email = $validatedData['email'];
+    $owner->save();
 
-        return redirect()->route('owners.index')->with('success', 'Owner created successfully');
-    }
+    return redirect()->route('owners.index')->with('success', 'Owner created successfully');
+}
+
 
     public function show($id)
     {

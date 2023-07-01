@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dog;
 use Illuminate\Http\Request;
+use App\Models\Owner;
 
 class DogController extends Controller
 {
@@ -17,10 +18,11 @@ class DogController extends Controller
     }
 
     public function create()
-    {
-        // Mostra il form per la creazione di un nuovo cane
-        return view('dogs.create');
-    }
+{
+    $owners = Owner::all();
+    return view('dogs.create', compact('owners'));
+}
+
 
     public function store(Request $request)
 {
