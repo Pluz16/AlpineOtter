@@ -15,6 +15,7 @@
                         <th>Pedigree</th>
                         <th>Birthdate</th>
                         <th>Owner</th>
+                        <th>Description</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -24,7 +25,7 @@
                         <td>
                             @if (isset($dog->photos))
                                 @foreach ($dog->photos as $photo)
-                                    <img src="{{ asset($photo->path) }}" alt="Dog Photo" width="100">
+                                <img src="{{ asset('storage/' . $photo->path) }}" alt="Dog Photo" width="100">
                                 @endforeach
                             @endif
                         </td>
@@ -32,6 +33,8 @@
                             <td>{{ $dog->pedigree }}</td>
                             <td>{{ $dog->birthdate }}</td>
                             <td>{{ $dog->owner ? $dog->owner->name : 'No Owner' }}</td>
+                            <td>{{ $dog->description }}</td>
+                            
                             
                             <td>
                                 <a href="{{ route('dogs.edit', $dog->id) }}" class="btn btn-sm btn-primary">Edit</a>
