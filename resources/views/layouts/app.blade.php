@@ -6,6 +6,8 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
