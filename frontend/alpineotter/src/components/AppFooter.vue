@@ -4,9 +4,9 @@
       <div class="useful-section">
         <div class="section-title">Sezioni utili</div>
         <div class="useful-links">
-          <router-link to="/allevamento">-Allevamento Labrador Retriever</router-link>
-          <router-link to="/cuccioli">-Cuccioli Labrador Retriever</router-link>
-          <router-link to="/pensione">-Pensione e Villaggio Vacanze</router-link>
+          <router-link to="/allevamento">- Allevamento Labrador Retriever</router-link>
+          <router-link to="/cuccioli">- Cuccioli Labrador Retriever</router-link>
+          <router-link to="/pensione">- Pensione e Villaggio Vacanze</router-link>
         </div>
       </div>
       <div class="horizontal-links">
@@ -32,102 +32,162 @@
   </footer>
 </template>
 
-<style>
+<style scoped>
+.app-footer {
+  color: #000;
+  font-family: HeadlandOne;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  background: #3FA273;
+  padding: 40px;
+  text-align: center;
+}
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+}
+
+.useful-section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #000;
+  font-size: 32px;
+  /* margin-bottom: 20px; */
+}
+
+.useful-links {
+  color: #000;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horizontal-links {
+  display: flex;
+  color: #000;
+  font-size: 24px;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.company-title {
+  color: #000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.owner-name {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-info a {
+  color: #000;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-image {
+  width: 150px;
+  height: auto;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
   .app-footer {
-    color: #000;
-    font-family: HeadlandOne;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
     flex-direction: row;
-    background: #3FA273;
-    height: 460px;
-    align-items: center;
+    height: auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
   }
 
   .footer-left {
-    display: flex;
-    width: 75%;
-    flex-direction: column;
-    padding-left: 25px;
-    
+    align-items: flex-start;
+    margin-bottom: 0;
   }
 
   .useful-section {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
+    width: auto;
   }
 
   .section-title {
-    color: #000;
-    font-size: 32px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .useful-links {
-    color: #000;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    
+    font-size: 16px;
+    /* flex-direction: row; */
+    align-items: flex-start;
   }
 
   .horizontal-links {
-    display: flex;
-    color: #000;
-    font-size: 24px;
-  }
-
-  .horizontal-links, router-link{
-    padding-left: 10px;
-    padding-top: 10px;
+    margin-bottom: 0;
   }
 
   .footer-center {
-    display: flex;
-    width: 75%;
-    flex-direction: column;
-    /* align-items: flex-end; */
+    align-items: flex-start;
+    margin-bottom: 0;
   }
 
   .company-title {
-    display: flex;
-    width: 100%;
-    color: #000;
-    font-size: 32px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .owner-name {
-    display: flex;
-    width: 100%;
-    color: #000;
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .footer-info {
-    display: flex;
-    width: 100%;
-    color: #000;
-    font-size: 20px;
-    flex-direction: column;
-    
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .footer-right {
-    display: flex;
-    width: 25%;
-    flex-direction: column;
+    align-items: flex-end;
   }
 
   .sponsor-image {
-    width: 150px;
-    height: 106px;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    display: flex;
-    padding-top: 5px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
   }
+}
 </style>
-
