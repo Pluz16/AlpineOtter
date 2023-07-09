@@ -59,4 +59,28 @@ export default {
   color: #000;
   font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+}
 </style>

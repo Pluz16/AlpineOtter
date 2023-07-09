@@ -1,21 +1,21 @@
 <template>
-    <div class="first-hero">
-      <div class="background-image">
-      </div>
-      <div class="content">
-        <div class="text">
-          <div class="left" @click="goToAllevamento">
-            <h2>ALLEVAMENTO LABRADOR</h2>
-          </div>
-          <div class="right" @click="goToPensione">
-            <h2>PENSIONE + SERVIZI</h2>
-          </div>
+  <div class="first-hero">
+    <div class="background-image">
+    </div>
+    <div class="content">
+      <div class="text">
+        <div class="left" @click="goToAllevamento">
+          <h2>ALLEVAMENTO LABRADOR</h2>
+        </div>
+        <div class="right" @click="goToPensione">
+          <h2>PENSIONE + SERVIZI</h2>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
+  </div>
+</template>
+
+<script>
 import { useRouter } from 'vue-router';
 
 export default {
@@ -33,79 +33,80 @@ export default {
 };
 </script>
 
-  
-  <style scoped>
-  .first-hero {
-    position: relative;
-    height: 400px;
-  }
-  
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/cicc2.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .content {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  
-  .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-top: 20px;
-  }
+<style scoped>
+.first-hero {
+  position: relative;
+  height: 400px;
+}
 
-  .right, .right:hover{
-    border-radius: 75px; 
-  border-top-left-radius: 0; 
-  border-bottom-left-radius: 0; 
-  background-color: #81A5EB;
-  }
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/cicc2.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-  
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+}
 
-  .left{
-    border-radius: 75px;
-    border-top-right-radius: 0; 
-  border-bottom-right-radius: 0; 
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.right,
+.left {
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 360px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  border-radius: 75px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #F0A6A6;
+}
 
-  }
-  
+.right {
+  border-radius: 75px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #81A5EB;
+}
+
+.left:hover,
+.right:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.left h2,
+.right h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
   .left,
   .right {
-    cursor: pointer;
-    padding: 10px 20px;
-    width: 360px;
-    height: 100px;
-    display: flex;
-    justify-content: center; /* Centra orizzontalmente il contenuto */
-  align-items: center;
+    width: 100%;
   }
-  
-  .left:hover,
-  .right:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .left h2,
-  .right h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-  </style>
-  
+}
+</style>

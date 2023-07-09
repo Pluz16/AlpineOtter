@@ -19,6 +19,35 @@
       </div>
     </div>
   </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Clicca per l'elenco
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+            <div v-for="dog in dogs" :key="dog.id" class="col-md-3 col-sm-6">
+              <div class="dog-card">
+                <div class="dog-image">
+                  <div class="circle-container">
+                    <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
+                  </div>
+                  <div class="overlay">
+                    <span class="overlay-text">Scopri di più</span>
+                  </div>
+                </div>
+                <h3 class="dog-name">{{ dog.name }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -56,7 +85,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 10px; */
 }
 
 .dog-image {
@@ -74,6 +102,10 @@ export default {
   justify-content: center;
 }
 
+
+.accordion{
+  display: none;
+}
 .circle-container img {
   max-width: 100%;
   max-height: 100%;
@@ -105,21 +137,58 @@ export default {
 }
 
 .dog-name {
-  /* margin-top: 10px; */
   font-size: 18px;
 }
 
 @media (max-width: 767px) {
   .row {
     flex-wrap: wrap;
-    display: flex;
+    display: inline;
     flex-direction: column;
     align-items: center;
   }
+
+  .slider-container {
+  display: none;
+}
   
   .dog-card {
     flex: 0 0 100%;
   }
+  
+  .accordion {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .accordion-item {
+    margin-bottom: 20px;
+  }
+  
+  .accordion-body {
+    display: none;
+    background-color: #F0A6A6;
+  }
+  
+  .accordion-button {
+    background-color: #F0A6A6;
+    color: #000;
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .accordion-button::after {
+    float: right;
+    margin-top: 6px;
+  }
+  
+  .accordion-collapse.show .accordion-body {
+    display: block;
+  }
 }
-
 </style>
+
