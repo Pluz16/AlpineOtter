@@ -5,6 +5,7 @@
       <FirstHero />
       <app-owns></app-owns>
       <AppReception />
+      <AppEtica />
       <router-view />
     </div>
     <AppFooter />
@@ -17,6 +18,8 @@ import AppFooter from '@/components/AppFooter.vue';
 import FirstHero from '@/components/FirstHero.vue';
 import AppOwns from './components/AppOwns.vue';
 import AppReception from './components/AppReception.vue';
+import AppEtica from "@/components/AppEtica.vue";
+
 
 export default {
   name: 'App',
@@ -26,6 +29,7 @@ export default {
     AppOwns,
     AppFooter,
     AppReception,
+    AppEtica,
   },
 };
 </script>
