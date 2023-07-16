@@ -6,21 +6,44 @@
     <div class="brand">
       <h1>Megan &amp; Co.</h1>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">Allevamento</a></li>
-        <li><a href="#">Pensione</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Chi siamo</a></li>
-        <li><a href="#">Contattaci</a></li>
-      </ul>
-    </nav>
+    <div>
+      <div class="accordion" id="headerAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#headerCollapse" :aria-expanded="isMenuOpen" aria-controls="headerCollapse" @click="toggleMenu" :class="{ 'collapsed': !isMenuOpen }">
+              {{ isMenuOpen ? 'Chiudi il Menù' : 'Apri il Menù' }}
+            </button>
+          </h2>
+          <div id="headerCollapse" class="accordion-collapse collapse" :class="{ 'show': isMenuOpen }" data-bs-parent="#headerAccordion">
+            <div class="accordion-body">
+              <ul class="responsive-list">
+                <li><a href="#" class="list-link">Allevamento</a></li>
+                <li><a href="#" class="list-link">Pensione</a></li>
+                <li><a href="#" class="list-link">Blog</a></li>
+                <li><a href="#" class="list-link">Chi siamo</a></li>
+                <li><a href="#" class="list-link">Contattaci</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
   name: 'AppHeader',
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
 };
 </script>
 
@@ -45,19 +68,21 @@ export default {
   font-size: 20px;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
+.accordion-item {
+  background-color: #3FA273;
 }
 
-.navbar li {
-  margin-right: 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #000;
+.accordion-button {
   font-weight: bold;
+}
+
+.list-link {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.list-link:hover {
+  color: #F0A6A6;
 }
 
 @media (max-width: 767px) {
@@ -70,16 +95,16 @@ export default {
     margin-bottom: 10px;
   }
 
-  .navbar {
+  .accordion-body {
     margin-top: 10px;
   }
 
-  .navbar ul {
+  .accordion-body ul {
     flex-direction: column;
     align-items: center;
   }
 
-  .navbar li {
+  .accordion-body li {
     margin: 5px 0;
   }
 }

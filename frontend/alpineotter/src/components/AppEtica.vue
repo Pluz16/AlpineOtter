@@ -25,6 +25,7 @@
   
   .image-container {
     display: flex;
+    height: auto;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
@@ -32,8 +33,9 @@
   
   .image {
     width: 50%;
-    height: auto;
-    object-fit: cover;
+    max-height: 250px;
+    
+    object-fit: contain;
     margin: 10px;
   }
   
