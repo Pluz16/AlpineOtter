@@ -1,6 +1,6 @@
 <template>
   <header class="app-header">
-    <div class="logo">
+    <div class="logo" @click="goToHomePage">
       <img src="@/assets/logodef.jpg" alt="Logo" />
     </div>
     <div class="brand">
@@ -17,11 +17,11 @@
           <div id="headerCollapse" class="accordion-collapse collapse" :class="{ 'show': isMenuOpen }" data-bs-parent="#headerAccordion">
             <div class="accordion-body">
               <ul class="responsive-list">
-                <li><a href="#" class="list-link">Allevamento</a></li>
-                <li><a href="#" class="list-link">Pensione</a></li>
-                <li><a href="#" class="list-link">Blog</a></li>
-                <li><a href="#" class="list-link">Chi siamo</a></li>
-                <li><a href="#" class="list-link">Contattaci</a></li>
+                <li><router-link to="/allevamento" class="list-link">Allevamento</router-link></li>
+                <li><router-link to="/pensione" class="list-link">Pensione</router-link></li>
+                <li><router-link to="/blog" class="list-link">Blog</router-link></li>
+                <li><router-link to="/chi-siamo" class="list-link">Chi siamo</router-link></li>
+                <li><router-link to="/contattaci" class="list-link">Contattaci</router-link></li>
               </ul>
             </div>
           </div>
@@ -43,6 +43,9 @@ export default {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
+    goToHomePage() {
+      this.$router.push('/'); // Indirizzamento alla homepage
+    },
   },
 };
 </script>
@@ -53,6 +56,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  cursor: pointer;
 }
 
 .logo {
