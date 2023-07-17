@@ -5,7 +5,7 @@
 La nostra posizione privilegiata, vicina ai centri abitati, vi offre un'esperienza unica e rilassante per il vostro cane.
 </p>
       <button class="btn">Vienici a trovare</button>
-      <img src="../assets/struttura.jpg" alt="Immagine reception" class="reception-image" />
+      <img src="@/assets/struttura.jpg" alt="Immagine reception" class="reception-image" />
     </div>
   </template>
   

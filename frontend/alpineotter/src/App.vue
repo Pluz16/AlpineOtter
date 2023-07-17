@@ -1,13 +1,7 @@
 <template>
   <div id="app" class="app-container">
     <AppHeader />
-    <div class="content">
-      <FirstHero />
-      <app-owns></app-owns>
-      <AppReception />
-      <AppEtica />
-      <router-view />
-    </div>
+    <router-view />
     <AppFooter />
   </div>
 </template>
@@ -15,21 +9,13 @@
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
-import FirstHero from '@/components/FirstHero.vue';
-import AppOwns from './components/AppOwns.vue';
-import AppReception from './components/AppReception.vue';
-import AppEtica from "@/components/AppEtica.vue";
 
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    FirstHero,
-    AppOwns,
     AppFooter,
-    AppReception,
-    AppEtica,
   },
 };
 </script>

@@ -1,7 +1,6 @@
 <template>
   <div class="first-hero">
-    <div class="background-image">
-    </div>
+    <div class="background-image"></div>
     <div class="content">
       <div class="text">
         <div class="left" @click="goToAllevamento">
@@ -16,18 +15,14 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router';
-
 export default {
   name: 'FirstHero',
   methods: {
     goToAllevamento() {
-      const router = useRouter();
-      router.push('/allevamento'); // Indirizzamento alla pagina dell'allevamento
+      this.$router.push('/allevamento'); // Indirizzamento alla pagina dell'allevamento
     },
     goToPensione() {
-      const router = useRouter();
-      router.push('/pensione'); // Indirizzamento alla pagina della pensione
+      this.$router.push('/pensione'); // Indirizzamento alla pagina della pensione
     },
   },
 };
@@ -45,7 +40,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../assets/cicc2.jpg);
+  background-image: url(@/assets/cicc2.jpg);
   background-size: cover;
   background-position: center;
 }
