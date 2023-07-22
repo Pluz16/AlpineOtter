@@ -3,7 +3,7 @@
       <h2 class="title">Come lavoriamo?</h2>
       <div class="image-container">
         <div class="text-container">
-          <p class="text">Alleviamo pochi esemplari che condividono con noi tempo e spazi e che fanno parte della nostra famiglia. Per questo motivo programmiamo un numero ridotto di cucciolate ogni anno, lavorando sui cuccioli ed essendo molto selettivi nella scelta delle famiglie a cui li affidiamo.</p>
+          <p class="text">Alleviamo con cura e dedizione pochi esemplari di Labrador Retriever, condividendo tempo e spazi insieme a loro come parte della nostra famiglia. Per garantire un'attenzione individuale, programmiamo con cura un numero limitato di cucciolate ogni anno, lavorando attentamente sui cuccioli e selezionando con cura le famiglie adottive.</p>
           <p class="text">La nostra passione per gli animali affonda negli insegnamenti di nonni e genitori, che ci hanno consentito di vivere a contatto con la natura ed in particolare con cani di ogni tipo.</p>
         </div>
       </div>

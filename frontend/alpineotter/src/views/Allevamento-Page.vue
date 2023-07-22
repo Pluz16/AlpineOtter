@@ -13,15 +13,42 @@
     <div class="card-row">
       <div class="card card-1">
         <h4 class="card-text">SALUTE</h4>
+        <p class="card-text-description" >
+            La salute è un aspetto fondamentale sul quale basiamo la nostra selezione.
+            Tutti i nostri cani sono testati ufficialmente per displasia (FSA/CELEMASCHE),
+            hanno il DNA depositato ed un ricco pannello di test genetici LABOKLIN.
+            Tutti i risultati sono a disposizione dei clienti.
+          </p>
       </div>
       <div class="card card-2">
         <h4 class="card-text">CARATTERE</h4>
+        <p class="card-text-description" >
+          Il carattere è un tratto distintivo del Labrador.
+            Un labrador non sarebbe tale senza una innata volontà di compiacere
+            e spiccati tratti di socievolezza ed attitudine al gioco.
+            Questi punti ne rendono facile l'addestramento per attività specifiche.
+        </p>
+
       </div>
       <div class="card card-3">
         <h4 class="card-text">FUNZIONALITÀ</h4>
+        <p class="card-text-description" >
+          La funzionalità è fondamentale per un Labrador.
+            Prima di essere "bello" un labrador deve essere "funzionale".
+            Struttura ossea di sostanza ma non eccessivamente pesante,
+            i giusti angoli ed appiombi, un collo adatto a sorreggere prede.
+            Coda grossa e di lunghezza media, che deve fungere da timone nella sua attività, preferita: IL NUOTO!
+            Per non parlare di una andatura fluida e di un fiuto eccellente che lo devono aiutare a ritrovare e riportare al conduttore.
+        </p>
       </div>
       <div class="card card-4">
         <h4 class="card-text">BELLEZZA</h4>
+        <p class="card-text-description" >
+          La bellezza è strettamente funzionale per noi.
+            Nella nostra selezione privilegiamo cani non eccessivamente pesanti
+            con l'obbiettivo di aderire perfettamente allo standard.
+            Se qualche risultato lo abbiamo raggiunto, potete verificarlo noi curiosando fra le nostre foto.
+        </p>
       </div>
     </div>
   </div>
@@ -119,7 +146,15 @@
 
 /* CAROUSEL */
 
-
+.card-text {
+  font-size: 1.5rem; /* Imposta una dimensione del font base */
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  white-space: nowrap; /* Impedisce al testo di andare a capo */
+  overflow: hidden; /* Nasconde eventuali testi che superano la larghezza della card */
+  text-overflow: ellipsis; /* Aggiunge puntini di sospensione quando il testo è nascosto */
+}
 
 .section-title {
   font-size: 1,5rem; /* Il testo avrà il 4% della larghezza del viewport come dimensione del font */
@@ -133,6 +168,9 @@
   padding-bottom: 10px;
 }
 
+.card-row {
+  position: relative; /* Aggiungi questa proprietà per consentire il posizionamento assoluto della descrizione */
+}
 .card {
   flex: 0 0 25%;
   height: 200px;
@@ -152,6 +190,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+
+
+.card-text:hover{
+  display: none;
+}
+
 .card::before {
   content: "";
   position: absolute;
@@ -163,11 +209,65 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.card-text {
-  font-size: 1.5rem; /* Imposta una dimensione del font base */
+.card:hover h4{
+  display: none;
+}
+
+.card:hover p{
+  display: flex;
+  background-color: rgba(240, 248, 255, 0.574);
+}
+
+.card-text-description{
+  display: none;
+  font-size: 11px;
   text-align: center;
-  font-weight: bold;
-  z-index: 1;
+  color: #000000;
+  font-weight: 900;
+  max-width: fit-content;
+}
+
+.card-text-description:hover{
+  display: flex;
+}
+
+
+.card-text-description {
+  /* Resto dello stile per la descrizione */
+  display: none;
+  font-size: 11px;
+  text-align: center;
+  color: #000000;
+  font-weight: 900;
+  position: absolute;
+  top: 50%; /* Posiziona il paragrafo al centro della card */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Imposta la larghezza della descrizione al 100% del container */
+  background-color: rgba(240, 248, 255, 0.574);
+  padding: 10px;
+  border-radius: 5px;
+  white-space: normal; /* Permette al testo di andare a capo */
+}
+
+.card:hover .card-text {
+  display: none; /* Nascondi il testo della card al passaggio del mouse */
+}
+
+.card:hover .card-text-description {
+  display: flex; /* Mostra il paragrafo al passaggio del mouse */
+  position: absolute;
+  top: 50%; /* Posiziona il paragrafo al centro della card */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 248, 255, 0.574);
+  padding: 10px;
+  border-radius: 5px;
+  padding: 10 10 10 10;
+}
+
+.card-row {
+  position: relative; /* Aggiungi questa proprietà per consentire il posizionamento assoluto della descrizione */
 }
 
 .card-1 {
@@ -190,6 +290,7 @@
 
   .card {
     max-width: 250px; /* Riduci la larghezza massima della card su schermi più piccoli */
+    height: 180px; /* Riduci l'altezza della card su schermi più piccoli */
   }
 
   .card-text {
@@ -200,8 +301,14 @@
 @media (max-width: 576px) {
   .card {
     max-width: 200px; /* Riduci ancora di più la larghezza massima della card su schermi ancora più piccoli */
+    height: 200px; /* Riduci ulteriormente l'altezza della card su schermi ancora più piccoli */
     writing-mode: vertical-lr;
     text-orientation: upright;
+  }
+
+  .card-text-description{
+    writing-mode: horizontal-tb; /* Imposta il testo orizzontalmente */
+    text-orientation: mixed; /* Imposta il testo orizzontalmente senza ruotare */
   }
 
   .card-text {
