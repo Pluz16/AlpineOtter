@@ -78,6 +78,7 @@ export default {
 
 .accordion-button {
   font-weight: bold;
+  background-color: #ffe4c4;
 }
 
 .list-link {

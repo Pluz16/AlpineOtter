@@ -19,10 +19,10 @@ export default {
   name: 'FirstHero',
   methods: {
     goToAllevamento() {
-      this.$router.push('/allevamento'); // Indirizzamento alla pagina dell'allevamento
+      this.$router.push('/allevamento');
     },
     goToPensione() {
-      this.$router.push('/pensione'); // Indirizzamento alla pagina della pensione
+      this.$router.push('/pensione');
     },
   },
 };
@@ -62,8 +62,8 @@ export default {
   margin-top: 20px;
 }
 
-.right,
-.left {
+.left,
+.right {
   cursor: pointer;
   padding: 10px 20px;
   width: 360px;
@@ -77,14 +77,14 @@ export default {
   border-radius: 75px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #F0A6A6;
+  background-color: #f0a6a6;
 }
 
 .right {
   border-radius: 75px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #81A5EB;
+  background-color: #81a5eb;
 }
 
 .left:hover,
@@ -102,6 +102,14 @@ export default {
   .left,
   .right {
     width: 100%;
+    border-radius: 75px;
+  }
+
+  .left,
+  .right,
+  .left h2,
+  .right h2 {
+    font-size: 18px;
   }
 }
 </style>

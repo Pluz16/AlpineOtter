@@ -3,7 +3,7 @@
     <h2 class="title">I NOSTRI CANI</h2>
     <div class="slider-container">
       <div class="row">
-        <div v-for="dog in dogs" :key="dog.id" class="col-md-3 col-sm-6">
+        <div v-for="dog in dogs" :key="dog.id" class="col-md-2 col-sm-4">
           <div class="dog-card">
             <div class="dog-image">
               <div class="circle-container">
@@ -18,29 +18,30 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Clicca per l'elenco
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <div class="row">
-            <div v-for="dog in dogs" :key="dog.id" class="col-md-3 col-sm-6">
-              <div class="dog-card">
-                <div class="dog-image">
-                  <div class="circle-container">
-                    <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
+    <!-- Accordion per vista mobile -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Clicca per l'elenco
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="row">
+              <div v-for="dog in dogs" :key="dog.id" class="col-6">
+                <div class="dog-card">
+                  <div class="dog-image">
+                    <div class="circle-container">
+                      <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
+                    </div>
+                    <div class="overlay">
+                      <span class="overlay-text">Scopri di più</span>
+                    </div>
                   </div>
-                  <div class="overlay">
-                    <span class="overlay-text">Scopri di più</span>
-                  </div>
+                  <h3 class="dog-name">{{ dog.name }}</h3>
                 </div>
-                <h3 class="dog-name">{{ dog.name }}</h3>
               </div>
             </div>
           </div>
@@ -59,6 +60,7 @@ export default {
         { id: 2, name: 'Magda', photo: 'Magda_head.jpg' },
         { id: 3, name: 'Cuba', photo: 'Cuba_head.jpg' },
         { id: 4, name: 'Webby', photo: 'Webby_head.jpg' },
+        { id: 5, name: 'Megan', photo: 'Meg_head.jpg' },
       ],
     };
   },
@@ -102,13 +104,9 @@ export default {
   justify-content: center;
 }
 
-
-.accordion{
-  display: none;
-}
 .circle-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -140,17 +138,41 @@ export default {
   font-size: 18px;
 }
 
+/* Nascondi l'accordion in vista desktop */
+@media (min-width: 768px) {
+  .accordion {
+    display: none;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-2 {
+    flex: 0 0 calc(20% - 10px);
+    margin: 5px;
+  }
+
+  .circle-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Modifiche per vista mobile nell'accordion */
 @media (max-width: 767px) {
   .row {
     flex-wrap: wrap;
-    display: inline;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .slider-container {
-  display: none;
-}
+    display: none;
+  }
   
   .dog-card {
     flex: 0 0 100%;
@@ -188,6 +210,16 @@ export default {
   
   .accordion-collapse.show .accordion-body {
     display: block;
+  }
+
+  .col-6 {
+    flex: 0 0 calc(50% - 10px);
+    margin: 5px;
+  }
+
+  .circle-container {
+    width: 100px;
+    height: 100px;
   }
 }
 </style>

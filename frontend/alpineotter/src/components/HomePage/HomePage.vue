@@ -4,6 +4,7 @@
       <AppOwns />
       <AppReception />
       <AppEtica />
+      <AppSlider />
       <!-- Aggiungi altri componenti della homepage -->
     </div>
   </template>
@@ -13,6 +14,7 @@
   import AppOwns from '@/components/HomePage/AppOwns.vue';
   import AppReception from '@/components/HomePage/AppReception.vue';
   import AppEtica from '@/components/HomePage/AppEtica.vue';
+  import AppSlider from '@/components/HomePage/AppSlider.vue';
   
   export default {
     name: 'HomePage',
@@ -20,6 +22,7 @@
       FirstHero,
       AppOwns,
       AppReception,
+      AppSlider,
       AppEtica,
       // Aggiungi altri componenti della homepage
     },

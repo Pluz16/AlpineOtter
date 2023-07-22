@@ -181,13 +181,67 @@
   }
 
   .footer-right {
-    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
   }
 
   .sponsor-image {
     width: 100px;
     height: auto;
     margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .useful-links {
+    font-size: 16px;
+  }
+
+  .horizontal-links {
+    font-size: 20px;
+  }
+
+  .company-title {
+    font-size: 24px;
+  }
+
+  .owner-name {
+    font-size: 16px;
+  }
+
+  .footer-info {
+    font-size: 16px;
+  }
+}
+
+/* Stili per schermi di dimensioni superiori a 768px */
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .useful-links {
+    font-size: 20px;
+  }
+
+  .horizontal-links {
+    font-size: 24px;
+  }
+
+  .company-title {
+    font-size: 32px;
+  }
+
+  .owner-name {
+    font-size: 20px;
+  }
+
+  .footer-info {
+    font-size: 20px;
   }
 }
 </style>
