@@ -14,40 +14,86 @@
       <div class="card card-1">
         <h4 class="card-text">SALUTE</h4>
         <p class="card-text-description" >
-            La salute è un aspetto fondamentale sul quale basiamo la nostra selezione.
-            Tutti i nostri cani sono testati ufficialmente per displasia (FSA/CELEMASCHE),
-            hanno il DNA depositato ed un ricco pannello di test genetici LABOKLIN.
-            Tutti i risultati sono a disposizione dei clienti.
+          La salute è fondamentale per la nostra selezione. Tutti i nostri cani sono ufficialmente testati per displasia (FSA/CELEMASCHE) e sottoposti a un ricco pannello di test genetici LABOKLIN. I risultati sono disponibili per i clienti.
           </p>
       </div>
       <div class="card card-2">
         <h4 class="card-text">CARATTERE</h4>
         <p class="card-text-description" >
-          Il carattere è un tratto distintivo del Labrador.
-            Un labrador non sarebbe tale senza una innata volontà di compiacere
-            e spiccati tratti di socievolezza ed attitudine al gioco.
-            Questi punti ne rendono facile l'addestramento per attività specifiche.
+          Il carattere del Labrador è distintivo. La sua innata volontà di compiacere, socievolezza ed attitudine al gioco lo rendono facilmente addestrabile per attività specifiche.
         </p>
 
       </div>
       <div class="card card-3">
         <h4 class="card-text">FUNZIONALITÀ</h4>
         <p class="card-text-description" >
-          La funzionalità è fondamentale per un Labrador.
-            Prima di essere "bello" un labrador deve essere "funzionale".
-            Struttura ossea di sostanza ma non eccessivamente pesante,
-            i giusti angoli ed appiombi, un collo adatto a sorreggere prede.
-            Coda grossa e di lunghezza media, che deve fungere da timone nella sua attività, preferita: IL NUOTO!
-            Per non parlare di una andatura fluida e di un fiuto eccellente che lo devono aiutare a ritrovare e riportare al conduttore.
+          Il Labrador è funzionale, con struttura solida, coda adatta al nuoto e fiuto eccellente.
         </p>
       </div>
       <div class="card card-4">
         <h4 class="card-text">BELLEZZA</h4>
         <p class="card-text-description" >
-          La bellezza è strettamente funzionale per noi.
-            Nella nostra selezione privilegiamo cani non eccessivamente pesanti
-            con l'obbiettivo di aderire perfettamente allo standard.
-            Se qualche risultato lo abbiamo raggiunto, potete verificarlo noi curiosando fra le nostre foto.
+          La nostra selezione privilegia cani non eccessivamente pesanti, aderenti allo standard e con risultati visibili nelle foto.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="intro-section">
+  <div class="container">
+    <div class="centered-content">
+      <h4 class="sub-heading">Megan, la nostra prima labrador, ci ha insegnato molto su questa fantastica razza e ci ha permesso di conoscere molti esperti ed appassionati.</h4>
+    </div>
+  </div>
+</section>
+
+
+  <section class="puppy-section">
+  <div class="container">
+    <h2 class="section-title">I cuccioli</h2>
+    <div class="puppy-grid">
+      <div class="puppy-item">
+        <img src="@/assets/cucciolo.jpg" alt="Cucciolo 1">
+        <h3>Raggiungono le nuove famiglie dopo i 60 giorni di vita</h3>
+        <p>
+          Il periodo esatto viene concordato coi nuovi proprietari e valutato in base alla nostra esperienza.
+          I cuccioli vengono consegnati con primo vaccino eseguito (o secondo vaccino in base ad accordi specifici)
+          ed hanno già effettuato almeno una visita veterinaria che ne verifica lo stato di salute generale.
+          Hanno già completato un ciclo di svermatura completo più eventuali altri trattamenti antiparassitari.
+        </p>
+      </div>
+      <div class="puppy-item">
+        <img src="@/assets/cucciolopeluche.jpg" alt="Cucciolo 2">
+        <h3>Pedigree e documenti</h3>
+        <p>
+          La pratica per il pedigree è già stata avviata e il documento ENCI verrà consegnato al nuovo intestatario
+          nei mesi successivi con modalità differenti a seconda degli accordi presi.
+          Ogni cucciolo è già microchippato e dotato di libretto sanitario.
+          Tutti i documenti, compresa la documentazione sanitaria dei genitori che comprende SEMPRE
+          certificazione ufficiale anche e gomiti e pacchetti di test genetici, viene consegnata ai nuovi proprietari,
+          assieme ad un puppy kit.
+        </p>
+      </div>
+      <div class="puppy-item">
+        <img src="@/assets/andre_puppy.jpg" alt="Cucciolo 3">
+        <h3>Prima socializzazione e monitoraggio</h3>
+        <p>
+          Durante la sua permanenza presso di noi, dalla nascita alla consegna, viene effettuato attento monitoraggio
+          delle caratteristiche di ogni cane che, con gradualità, viene esposto a diversi stimoli ambientali e ad una
+          prima socializzazione intra ed interspecifica.
+          I cuccioli vengono lasciati nella disponibilità della madre per lunghi periodi e sono sempre in contatto fra loro.
+          Quello che imparano in queste prime settimane attraverso il gioco rappresenta un patrimonio di esperienze
+          che li accompagnerà per tutta la vita e ne consoliderà il carattere.
+        </p>
+      </div>
+      <div class="puppy-item">
+        <img src="@/assets/webbina.jpg" alt="Cucciolo 4">
+        <h3>Supporto a vita</h3>
+        <p>
+          Siamo a disposizione PER TUTTA LA VITA DEL CANE per consigli e supporto.
+          In casi particolari, è possibile accordarsi per pagamenti dilazionati.
         </p>
       </div>
     </div>
@@ -60,15 +106,6 @@
       <button class="info-button">Clicca qui!</button>
     </div>
   </section>
-
-<section class="intro-section">
-  <div class="container">
-    <div class="centered-content">
-      <h4 class="sub-heading">Megan, la nostra prima labrador, ci ha insegnato molto su questa fantastica razza e ci ha permesso di conoscere molti esperti ed appassionati.</h4>
-    </div>
-  </div>
-</section>
-
 
 <section class="ethical-breeding-section">
     <div class="container-ethical">
@@ -218,14 +255,7 @@
   background-color: rgba(240, 248, 255, 0.574);
 }
 
-.card-text-description{
-  display: none;
-  font-size: 11px;
-  text-align: center;
-  color: #000000;
-  font-weight: 900;
-  max-width: fit-content;
-}
+
 
 .card-text-description:hover{
   display: flex;
@@ -293,9 +323,31 @@
     height: 180px; /* Riduci l'altezza della card su schermi più piccoli */
   }
 
+
+  .card-text-description {
+  /* Resto dello stile per la descrizione */
+  display: none;
+  font-size: 9px;
+  text-align: center;
+  color: #000000;
+  font-weight: 750;
+  position: absolute;
+  top: 50%; /* Posiziona il paragrafo al centro della card */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Imposta la larghezza della descrizione al 100% del container */
+  max-height: 100%;
+  background-color: rgba(240, 248, 255, 0.574);
+  padding: 10px;
+  border-radius: 5px;
+  white-space: normal; /* Permette al testo di andare a capo */
+}
+
+
   .card-text {
     font-size: 15px; /* Riduci la dimensione del font su schermi più piccoli */
   }
+
 }
 
 @media (max-width: 576px) {
@@ -306,20 +358,111 @@
     text-orientation: upright;
   }
 
-  .card-text-description{
-    writing-mode: horizontal-tb; /* Imposta il testo orizzontalmente */
-    text-orientation: mixed; /* Imposta il testo orizzontalmente senza ruotare */
+  .card h4{
+    font-size: small;
   }
 
-  .card-text {
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font su schermi ancora più piccoli */
-  }
+  .card:hover p {
+  display: none; /* Nascondi il testo della card al passaggio del mouse */
+}
+
+
+
+
 }
 
 
 
 
 /* END-CAROUSEL */
+
+/* CUCCIOLI */
+
+  .puppy-section {
+    padding: 40px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .puppy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .puppy-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  .puppy-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-height: 200px;
+  }
+
+  .puppy-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .puppy-item p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .puppy-item {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Posiziona gli elementi al centro orizzontalmente */
+  justify-content: center; /* Posiziona gli elementi al centro verticalmente */
+}
+
+.puppy-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  /* Imposta la larghezza e l'altezza delle immagini */
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Mantiene le proporzioni dell'immagine e riempie il container */
+}
+
+  }
+
+  @media (max-width: 576px) {
+    .puppy-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .puppy-item {
+      text-align: left;
+    }
+  }
+
+
+/* END-CUCCIOLI */
+
+
 
 /* SECTION CIT MEG */
 
