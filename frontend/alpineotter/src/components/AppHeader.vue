@@ -17,6 +17,7 @@
           <div id="headerCollapse" class="accordion-collapse collapse" :class="{ 'show': isMenuOpen }" data-bs-parent="#headerAccordion">
             <div class="accordion-body">
               <ul class="responsive-list">
+                <li><router-link to="/" class="list-link">Home</router-link></li>
                 <li><router-link to="/allevamento" class="list-link">Allevamento</router-link></li>
                 <li><router-link to="/pensione" class="list-link">Pensione</router-link></li>
                 <li><router-link to="/blog" class="list-link">Blog</router-link></li>
