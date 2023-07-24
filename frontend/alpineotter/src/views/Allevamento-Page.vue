@@ -11,9 +11,9 @@
   <div class="container">
     <h2 class="section-title">I nostri principi</h2>
     <div class="card-row">
-      <div class="card card-1">
+      <div class="card card-1" >
         <h4 class="card-text">SALUTE</h4>
-        <p class="card-text-description" >
+        <p class="card-text-description">
           La salute è fondamentale per la nostra selezione. Tutti i nostri cani sono ufficialmente testati per displasia (FSA/CELEMASCHE) e sottoposti a un ricco pannello di test genetici LABOKLIN. I risultati sono disponibili per i clienti.
           </p>
       </div>
@@ -22,7 +22,6 @@
         <p class="card-text-description" >
           Il carattere del Labrador è distintivo. La sua innata volontà di compiacere, socievolezza ed attitudine al gioco lo rendono facilmente addestrabile per attività specifiche.
         </p>
-
       </div>
       <div class="card card-3">
         <h4 class="card-text">FUNZIONALITÀ</h4>
@@ -37,6 +36,9 @@
         </p>
       </div>
     </div>
+    <div class="center-link">
+        <a href="/chi-siamo#ethics-section" class="card-link">Scopri di più</a>
+      </div>
   </div>
 
 </section>
@@ -131,6 +133,8 @@
 
 <script>
 
+
+
 </script>
 
 <style scoped>
@@ -182,6 +186,11 @@
 /* END- HEADER */
 
 /* CAROUSEL */
+
+.card-section{
+
+  margin-bottom: 16px;
+}
 
 .card-text {
   font-size: 1.5rem; /* Imposta una dimensione del font base */
@@ -298,6 +307,17 @@
 
 .card-row {
   position: relative; /* Aggiungi questa proprietà per consentire il posizionamento assoluto della descrizione */
+}
+
+.center-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Aggiungi uno spazio tra le card e il link */
+}
+
+.center-link a {
+  color: #020406;
+  font-weight: 800;
 }
 
 .card-1 {

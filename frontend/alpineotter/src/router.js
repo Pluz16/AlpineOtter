@@ -45,7 +45,8 @@ const routes = [
     component: AboutUs,
   },
 
-
+  { path: '/chi-siamo#ethics-section', 
+  component: AboutUs },
 
 
 ];

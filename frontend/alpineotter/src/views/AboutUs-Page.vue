@@ -55,7 +55,7 @@
     </div>
 
      <!-- Sezione "Etica dell'allevamento" - Salute -->
-     <div class="ethics-section">
+     <div class="ethics-section" id="ethics-section">
       <h2>Salute</h2>
       <p>
         La salute è un aspetto fondamentale sul quale basiamo la nostra selezione.
