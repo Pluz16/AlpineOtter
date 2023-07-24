@@ -4,6 +4,8 @@ import Allevamento from '@/views/Allevamento-Page.vue';
 import HomePage from '@/components/HomePage/HomePage.vue'
 import BlogPage from '@/views/Blog-Page.vue';
 import Pensione from '@/views/Pensione-Page.vue';
+import ContattaciPage from '@/views/Contattaci-Page.vue'
+import AboutUs from '@/views/AboutUs-Page.vue'
 
 const routes = [
   {
@@ -30,6 +32,20 @@ const routes = [
     name: 'Blog',
     component: BlogPage,
   },
+
+  {
+    path: '/contattaci',
+    name: 'Contattaci',
+    component: ContattaciPage,
+  },
+
+  {
+    path: '/chi-siamo',
+    name: 'Chi siamo',
+    component: AboutUs,
+  },
+
+
 
 
 ];

@@ -19,6 +19,7 @@
       <img src="@/assets/struttura.jpg" alt="Pensione per cani" />
     </div>
   </div>
+  <button class="btn-come"><h3>Prenota un appuntamento</h3></button>
   <div class="pensione-location">
     <h3>Una Location Unica</h3>
     <p>
@@ -26,6 +27,7 @@
       Questa cornice idilliaca è perfetta per lunghe passeggiate e giochi all'aperto,
       offrendo ai nostri ospiti la possibilità di vivere esperienze uniche a stretto contatto con la natura.
     </p>
+    <img src="@/assets/Maps.png"  alt="Pensione per cani" />
     <p>
       Inoltre, pur essendo immersi nella tranquillità della campagna,
       siamo comodamente vicini ai centri abitati, per garantire una facile accessibilità.
@@ -38,6 +40,7 @@
       ospitiamo esclusivamente cani in regola col percorso vaccinale e trattati con antiparassitari.
       La sicurezza e il comfort dei nostri amici a quattro zampe sono la nostra massima priorità.
     </p>
+    <img src="@/assets/SanBernardo.jpg" alt="Amici">
   </div>
   <div class="pensione-contact">
     <h3>Vieni a Trovarci!</h3>
@@ -46,6 +49,7 @@
       Se desideri scoprire di più sulla nostra pensione e prenotare un soggiorno per il tuo cane, contattaci o vieni a trovarci!
       Saremo felici di mostrarti il nostro ambiente e di conoscere il tuo amico peloso.
     </p>
+    <button class="btn-come"><h3>Prenota un appuntamento</h3></button>
   </div>
 </div>
 
@@ -74,15 +78,20 @@
 }
 
 .pensione-text {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .pensione-image {
-  flex: 1;
   margin-left: 20px;
 }
 
 .pensione-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.pensione-location img {
   max-width: 100%;
   border-radius: 8px;
 }
@@ -97,6 +106,33 @@ h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+.pensione-contact,
+.pensione-health {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-come{
+  margin-bottom: 16px;
+}
+
+.pensione-health img{
+  max-width: 70%;
+  max-height: 400px;
+  max-width: fit-content;
+}
+
+
+@media (max-width: 768px) {
+
+  .pensione-info{
+    display: block;
+  }
+
+}
+
 
 
 </style>
