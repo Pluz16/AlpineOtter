@@ -5,14 +5,14 @@
         <div class="section-title">Sezioni utili</div>
         <div class="useful-links">
           <router-link to="/allevamento">- Allevamento Labrador Retriever</router-link>
-          <router-link to="/cuccioli">- Cuccioli Labrador Retriever</router-link>
+          <router-link to="/allevamento">- Cuccioli Labrador Retriever</router-link>
           <router-link to="/pensione">- Pensione e Villaggio Vacanze</router-link>
         </div>
       </div>
       <div class="horizontal-links">
         <router-link to="/blog">BLOG</router-link>
-        <router-link to="/servizi">Servizi</router-link>
-        <router-link to="/etica">Etica</router-link>
+        <router-link to="/pensione">Servizi</router-link>
+        <router-link to="/chi-siamo">Etica</router-link>
       </div>
     </div>
     <div class="footer-center">
@@ -68,7 +68,7 @@
 }
 
 .useful-links {
-  color: #000;
+  color: #000; 
   font-size: 20px;
   display: flex;
   flex-direction: column;

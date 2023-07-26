@@ -53,7 +53,7 @@
 
 
   <section class="puppy-section">
-  <div class="container">
+  <div class="container" id="puppy">
     <h2 class="section-title">I cuccioli</h2>
     <div class="puppy-grid">
       <div class="puppy-item">
@@ -105,7 +105,69 @@
 <section class="info-section">
     <div class="info-content">
       <h2 class="info-title">Hai bisogno di informazioni o prezzi?</h2>
-      <button class="info-button">Clicca qui!</button>
+      <router-link to="/contattaci" class="info-button">Clicca qui!</router-link>
+    </div>
+  </section>
+
+  <section class="dog-list-section" >
+    <div class="container" id="dog-list">
+      <h2 class="section-title">I nostri cani</h2>
+      <div class="dog-list">
+        <div class="dog-item">
+          <img src="@/assets/Mira_head.jpg" alt="MIRA">
+          <h3>MIRA - LO16160431</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/Meg_head.jpg" alt="MEGAN">
+          <h3>MEGAN - LO14150633</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/Expo_Cuba_Head.jpg" alt="KARNISCHE ALPEN NESTELLA">
+          <h3>KARNISCHE ALPEN NESTELLA - LO17147585</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/Webby_head.jpg" alt="DAENERYS TARGARYEN ALPINE OTTER">
+          <h3>DAENERYS TARGARYEN ALPINE OTTER - LO20147494</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/Magda_head.jpg" alt="MAGDA ALPINE OTTER">
+          <h3>MAGDA ALPINE OTTER - LO2239349</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/webbina.jpg" alt="MARGE BOUVIER ALPINE OTTER">
+          <h3>MARGE BOUVIER ALPINE OTTER - LO22200609</h3>
+          <p>Test da effettuare al raggiungimento dell'età necessaria per sottoporsi all'analisi</p>
+        </div>
+        <div class="dog-item">
+          <img src="@/assets/Ulisse3.jpg" alt="ULISSE">
+          <h3>AHSEH DWAYNE RICARDO ONFROY ALPINE OTTER - LO21186107</h3>
+          <p>Displasia Anche e Gomiti: A/0
+            Testato LABOKLIN per 7 patologie
+            DNA depositato
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -380,11 +442,12 @@
 
   .card h4{
     font-size: small;
+    display: flex;
   }
 
-  .card:hover p {
-  display: none; /* Nascondi il testo della card al passaggio del mouse */
-}
+  .card:hover .card-text-description{
+    display: none;
+  }
 
 
 
@@ -610,6 +673,44 @@
 
 /*  END INFO SECTION */
 
+
+/* START DOG SECTION */
+
+.dog-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mostra 2 cani per riga in mobile */
+  gap: 20px; /* Spazi tra i cani */
+}
+
+@media (min-width: 768px) {
+  /* Layout per desktop */
+  .dog-list {
+    grid-template-columns: repeat(3, 1fr); /* Mostra 3 cani per riga in desktop */
+  }
+}
+
+.dog-item {
+  text-align: center;
+}
+
+.dog-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Stili aggiuntivi per il layout, puoi personalizzarli a tuo piacimento */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* END DOG SECTION */
 
 
 </style>

@@ -4,7 +4,7 @@
       <p class="description">Benvenuti nel nostro rifugio immerso nel verde del Canavese, ai confini della suggestiva Val d'Aosta. 
 La nostra posizione privilegiata, vicina ai centri abitati, vi offre un'esperienza unica e rilassante per il vostro cane.
 </p>
-      <button class="btn">Vienici a trovare</button>
+    <router-link to="/pensione#contact" class="btn"><h3>Vienici a Trovare</h3></router-link>
       <img src="@/assets/struttura.jpg" alt="Immagine reception" class="reception-image" />
     </div>
   </template>

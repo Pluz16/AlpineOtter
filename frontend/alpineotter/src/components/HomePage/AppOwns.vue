@@ -4,7 +4,7 @@
     <div class="slider-container">
       <div class="row">
         <div v-for="dog in dogs" :key="dog.id" class="col-md-2 col-sm-4">
-          <div class="dog-card">
+          <router-link to="/allevamento#dog-list" class="dog-card">
             <div class="dog-image">
               <div class="circle-container">
                 <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
@@ -14,7 +14,7 @@
               </div>
             </div>
             <h3 class="dog-name">{{ dog.name }}</h3>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
           <div class="accordion-body">
             <div class="row">
               <div v-for="dog in dogs" :key="dog.id" class="col-6">
-                <div class="dog-card">
+                <router-link to="/allevamento#dog-list" class="dog-card">
                   <div class="dog-image">
                     <div class="circle-container">
                       <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
@@ -41,7 +41,7 @@
                     </div>
                   </div>
                   <h3 class="dog-name">{{ dog.name }}</h3>
-                </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -87,6 +87,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #000;
 }
 
 .dog-image {
@@ -168,6 +169,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #000;
   }
 
   .slider-container {
@@ -176,7 +178,9 @@ export default {
   
   .dog-card {
     flex: 0 0 100%;
+    color: #000;
   }
+
   
   .accordion {
     display: block;
