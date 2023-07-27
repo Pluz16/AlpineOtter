@@ -122,7 +122,7 @@
           </p>
         </div>
         <div class="dog-item">
-          <img src="@/assets/Meg_head.jpg" alt="MEGAN">
+          <img src="@/assets/Megan_young.jpg" alt="MEGAN">
           <h3>MEGAN - LO14150633</h3>
           <p>Displasia Anche e Gomiti: A/0
             Testato LABOKLIN per 7 patologie

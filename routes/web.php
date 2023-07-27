@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DogController;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\PostController;
 use App\Models\Dog;
 use App\Models\Owner;
 
@@ -40,6 +41,20 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/owners/{owner}/edit', [OwnerController::class, 'edit'])->name('owners.edit');
     Route::put('/owners/{owner}', [OwnerController::class, 'update'])->name('owners.update');
     Route::delete('/owners/{owner}', [OwnerController::class, 'destroy'])->name('owners.destroy');
+
+    
+    // Rotte CRUD per le risorse Posts
+    Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+    Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+    Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+    Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
+    Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
+    Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
 });
+
+
 
 require __DIR__.'/auth.php';
