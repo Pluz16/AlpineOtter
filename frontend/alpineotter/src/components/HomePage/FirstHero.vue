@@ -102,7 +102,6 @@ export default {
   .left,
   .right {
     width: 100%;
-    border-radius: 75px;
   }
 
   .left,

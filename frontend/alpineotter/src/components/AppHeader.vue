@@ -18,11 +18,10 @@
             <div class="accordion-body">
               <ul class="responsive-list">
                 <li><router-link to="/" class="list-link">Home</router-link></li>
-                <li><router-link to="/allevamento" class="list-link">Allevamento</router-link></li>
-                <li><router-link to="/pensione" class="list-link">Pensione</router-link></li>
-                <li><router-link to="/blog" class="list-link">Blog</router-link></li>
-                <li><router-link to="/chi-siamo" class="list-link">Chi siamo</router-link></li>
-                <li><router-link to="/contattaci" class="list-link">Contattaci</router-link></li>
+                <li><router-link to="/allevamento#top" class="list-link">Allevamento</router-link></li>
+                <li><router-link to="/pensione#top" class="list-link">Pensione</router-link></li>
+                <li><router-link to="/chi-siamo#top" class="list-link">Chi siamo</router-link></li>
+                <li><router-link to="/contattaci#top" class="list-link">Contattaci</router-link></li>
               </ul>
             </div>
           </div>
@@ -93,16 +92,17 @@ export default {
 
 @media (max-width: 767px) {
   .app-header {
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
-  .logo {
-    margin-bottom: 10px;
-  }
+
 
   .accordion-body {
     margin-top: 10px;
+  }
+  .brand h1{
+    font-size: medium;
   }
 
   .accordion-body ul {

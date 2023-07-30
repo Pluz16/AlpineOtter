@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app-container">
-    <AppHeader />
+    <AppHeader  class="app-header"/>
     <router-view />
     <AppFooter />
   </div>
@@ -26,11 +26,13 @@ export default {
   background: linear-gradient(180deg, #75B96A 8.85%, rgba(178, 248, 214, 0.00) 100%);
 }
 
-.content {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
+.app-header {
+  position: sticky ;
+  top: 0;
+  background-color: #75B96A; /* Colore di sfondo dell'header */
+  z-index: 9999;
 }
+
 
 @media (max-width: 768px) {
   .content {

@@ -1,5 +1,5 @@
 <template>
-    <div class="about-us-page">
+    <div class="about-us-page" id="top">
       <div class="professionalita">
         <h2>PROFESSIONALITA’</h2>
         <p>

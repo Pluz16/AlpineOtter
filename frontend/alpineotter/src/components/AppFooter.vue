@@ -3,10 +3,11 @@
     <div class="footer-left">
       <div class="useful-section">
         <div class="section-title">Sezioni utili</div>
-        <div class="useful-links">
-          <router-link to="/allevamento">- Allevamento Labrador Retriever</router-link>
-          <router-link to="/allevamento">- Cuccioli Labrador Retriever</router-link>
-          <router-link to="/pensione">- Pensione e Villaggio Vacanze</router-link>
+          <div class="useful-links">
+    <!-- Aggiungi il metodo @click per gestire l'evento di click -->
+    <router-link @click="scrollToBreed" to="/allevamento#breed">Allevamento Labrador Retriever</router-link>
+    <router-link @click="scrollToPuppy" to="/allevamento#puppy">Cuccioli Labrador Retriever</router-link>
+    <router-link to="/pensione">Pensione e Villaggio Vacanze</router-link>
         </div>
       </div>
       <div class="horizontal-links">
@@ -19,7 +20,7 @@
       <h3 class="company-title">Megan & Co</h3>
       <p class="owner-name">di Manuel Punta</p>
       <p class="footer-info">
-        Indirizzo: Settimo Vittone (TO) Via Montiglie 16<br />
+        Indirizzo: Settimo Vittone (TO) Via Montiglie 18<br />
         IVA: 12427530014<br />
         Tel: +39 3421032437<br />
         <a href="https://www.facebook.com/alpineotter">https://www.facebook.com/alpineotter</a>
@@ -31,6 +32,34 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  methods: {
+    // Metodo per scrollare alla sezione #breed
+    scrollToBreed() {
+      const element = document.getElementById("breed");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+    // Metodo per scrollare alla sezione #puppy
+    scrollToPuppy() {
+      const element = document.getElementById("puppy");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
+};
+</script>
+In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cuccioli Labrador Retriever", verrà eseguito il metodo corrispondente (scrollToBreed e scrollToPuppy) e la pagina scrollerà automaticamente alla sezione desiderata con un effetto di scorrimento fluido (behavior: "smooth"). Assicurati che gli ID breed e puppy siano correttamente definiti nelle sezioni corrispondenti nella pagina allevamento.
+
+
+
+
+
+
 
 <style scoped>
 .app-footer {

@@ -19,7 +19,6 @@
       <p class="description">
         Ottima compagnia in casa e nelle nostre passeggiate ma pessimo guardiano!
         Il suo carattere affabile e la sua volontà di compiacere non lo rendono adatto a compiti di guardia e difesa.
-        Il componente dovrà essere importato in Homepage.vue.
       </p>
 
     <!-- Immagini -->
@@ -39,7 +38,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 5px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;

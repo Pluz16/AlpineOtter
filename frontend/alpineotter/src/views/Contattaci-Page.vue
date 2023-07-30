@@ -1,38 +1,25 @@
 <template>
-    <div class="contattaci-page">
+    <div class="contattaci-page" id="top">
       <div class="contattaci-info">
         <h2>Contattaci</h2>
-        <p>Indirizzo: Settimo Vittone (TO) Via Montiglie 16</p>
+        <p>Indirizzo: Settimo Vittone (TO) Via Montiglie 18</p>
         <p>IVA: 12427530014</p>
         <p>Tel: +39 3421032437</p>
         <p><a href="https://www.facebook.com/alpineotter">https://www.facebook.com/alpineotter</a></p>
+
+        <p>Per informazioni su Allevamento, cuccioli di Labrador e adulti:
+        <a href="mailto:alpineotterlabs@gmail.com?subject=Breeding&body=Message">
+          Scrivi qua
+        </a>
+        </p>
+        <p> Per informazioni su Pensione, Dog Sitting e Trasporti:
+        <a href="mailto:alpineotterlabs@gmail.com?subject=Dog'sVillage&body=Message">
+          Scrivi qua
+        </a>
+      </p>
       </div>
   
-      <div class="contattaci-form">
-        <h3>Richiedi una chiamata o un colloquio dal vivo</h3>
-        <form @submit.prevent="sendMessage">
-          <div>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" v-model="name" required>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" v-model="email" required>
-          </div>
-          <div>
-            <label for="message">Messaggio:</label>
-            <textarea id="message" v-model="message" required></textarea>
-          </div>
-          <div>
-            <label for="type">Seleziona:</label>
-            <select id="type" v-model="selectedType">
-              <option value="allevamento">Allevamento</option>
-              <option value="pensione">Pensione</option>
-            </select>
-          </div>
-          <button type="submit">Invia</button>
-        </form>
-      </div>
+      
     </div>
   </template>
   

@@ -1,5 +1,6 @@
 <template>
-    <div class="pensione-container">
+    <div class="pensione-container" id="top">
+      <h1 >Pensione e asilo diurno per cani</h1>
   <h2 class="pensione-title">Un Paradiso per i Vostri Amici a Quattro Zampe</h2>
   <div class="pensione-info">
     <div class="pensione-text">
@@ -83,6 +84,9 @@
 .pensione-container {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pensione-title {
@@ -186,6 +190,10 @@ h3 {
 
   .pensione-info{
     display: block;
+  }
+
+  .pensione-container{
+    margin: 5px;
   }
 
 }
