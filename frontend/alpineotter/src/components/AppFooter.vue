@@ -3,17 +3,17 @@
     <div class="footer-left">
       <div class="useful-section">
         <div class="section-title">Sezioni utili</div>
-          <div class="useful-links">
+          <div class="useful-links router-link">
     <!-- Aggiungi il metodo @click per gestire l'evento di click -->
-    <router-link @click="scrollToBreed" to="/allevamento#breed">Allevamento Labrador Retriever</router-link>
-    <router-link @click="scrollToPuppy" to="/allevamento#puppy">Cuccioli Labrador Retriever</router-link>
-    <router-link to="/pensione">Pensione e Villaggio Vacanze</router-link>
+    <router-link @click="scrollToBreed" to="/allevamento#breed" class="router-link">Allevamento Labrador Retriever</router-link>
+    <router-link @click="scrollToPuppy" to="/allevamento#puppy" class="router-link">Cuccioli Labrador Retriever</router-link>
+    <router-link to="/pensione" class="router-link">Pensione e Villaggio Vacanze</router-link>
         </div>
       </div>
-      <div class="horizontal-links">
-        <router-link to="/blog">BLOG</router-link>
-        <router-link to="/pensione">Servizi</router-link>
-        <router-link to="/chi-siamo">Etica</router-link>
+      <div class="horizontal-links ">
+        <router-link to="/blog" class="router-link">BLOG</router-link>
+        <router-link to="/pensione" class="router-link">Servizi</router-link>
+        <router-link to="/chi-siamo" class="router-link">Etica</router-link>
       </div>
     </div>
     <div class="footer-center">
@@ -25,10 +25,11 @@
         Tel: +39 3421032437<br />
         <a href="https://www.facebook.com/alpineotter">https://www.facebook.com/alpineotter</a>
       </p>
+      <router-link to="/cookies" class="router-link">Cookies</router-link><router-link to="/privacy" class="router-link">Privacy</router-link>
     </div>
     <div class="footer-right">
       <img src="../assets/enci.png" alt="ENCI" class="sponsor-image" />
-      <img src="../assets/fci.png" alt="Sponsor Image 2" class="sponsor-image" />
+      <img src="../assets/fci.png" alt="FCI" class="sponsor-image" />
     </div>
   </footer>
 </template>
@@ -140,7 +141,7 @@ In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cucc
 }
 
 .footer-info a {
-  color: #000;
+  color: #000 !important; 
 }
 
 .footer-right {
@@ -154,7 +155,15 @@ In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cucc
   height: auto;
   border-radius: 25px;
   margin-bottom: 10px;
+
 }
+
+.router-link {
+  color: rgb(0, 0, 0);
+}
+
+
+
 
 @media (min-width: 768px) {
   .app-footer {
@@ -217,11 +226,19 @@ In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cucc
   .sponsor-image {
     width: 100px;
     height: auto;
-    margin-bottom: 5px;
+    margin: 5px;
   }
 }
 
 @media (max-width: 768px) {
+
+  .app-footer{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
   .section-title {
     font-size: 24px;
   }
@@ -244,6 +261,10 @@ In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cucc
 
   .footer-info {
     font-size: 16px;
+  }
+
+  .sponsor-image {
+    display: none;
   }
 }
 
@@ -272,5 +293,7 @@ In questo modo, quando clicchi sui link "Allevamento Labrador Retriever" e "Cucc
   .footer-info {
     font-size: 20px;
   }
+
+  
 }
 </style>

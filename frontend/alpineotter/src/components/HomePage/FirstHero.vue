@@ -4,10 +4,10 @@
     <div class="content">
       <div class="text">
         <div class="left" @click="goToAllevamento">
-          <h2>ALLEVAMENTO LABRADOR</h2>
+          <a href="/allevamento#top"><h2>ALLEVAMENTO LABRADOR</h2></a>
         </div>
         <div class="right" @click="goToPensione">
-          <h2>PENSIONE + SERVIZI</h2>
+          <a href="/pensione#top"><h2>PENSIONE + SERVIZI</h2></a>
         </div>
       </div>
     </div>
@@ -110,5 +110,10 @@ export default {
   .right h2 {
     font-size: 18px;
   }
+}
+
+.left a,
+.right a{
+  color: aliceblue;
 }
 </style>

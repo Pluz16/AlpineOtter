@@ -64,6 +64,7 @@
   align-items: center;
   flex-wrap: wrap; /* Per far scendere le immagini su più righe quando lo schermo si riduce */
   max-width: 800px;
+  padding: 10px;
 }
 
 

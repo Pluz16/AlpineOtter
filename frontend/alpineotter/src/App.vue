@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="app-container">
     <AppHeader  class="app-header"/>
-    <router-view />
+    <div class="app-content">
+      <router-view />
+    </div>
     <AppFooter />
   </div>
 </template>
@@ -9,6 +11,8 @@
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
+
+
 
 
 export default {
@@ -24,6 +28,14 @@ export default {
 .app-container {
   font-family: 'Headland One', sans-serif;
   background: linear-gradient(180deg, #75B96A 8.85%, rgba(178, 248, 214, 0.00) 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.app-content{
+  flex-grow: 1;
+  height: 100%;
 }
 
 .app-header {

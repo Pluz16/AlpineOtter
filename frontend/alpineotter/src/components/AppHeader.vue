@@ -1,11 +1,18 @@
 <template>
   <header class="app-header">
     <div class="logo" @click="goToHomePage">
-      <img src="@/assets/logodef.jpg" alt="Logo" />
+      <a href="/"><img src="@/assets/logodef.jpg" alt="Logo" /></a>
     </div>
     <div class="brand">
       <h1>Megan &amp; Co.</h1>
     </div>
+    <nav class="desktop-navbar">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/allevamento#top" class="nav-link">Allevamento</a>
+      <a href="/pensione#top" class="nav-link">Pensione</a>
+      <a href="/chi-siamo#top" class="nav-link">Chi siamo</a>
+      <a href="/contattaci#top" class="nav-link">Contattaci</a>
+    </nav>
     <div>
       <div class="accordion" id="headerAccordion">
         <div class="accordion-item">
@@ -17,11 +24,11 @@
           <div id="headerCollapse" class="accordion-collapse collapse" :class="{ 'show': isMenuOpen }" data-bs-parent="#headerAccordion">
             <div class="accordion-body">
               <ul class="responsive-list">
-                <li><router-link to="/" class="list-link">Home</router-link></li>
-                <li><router-link to="/allevamento#top" class="list-link">Allevamento</router-link></li>
-                <li><router-link to="/pensione#top" class="list-link">Pensione</router-link></li>
-                <li><router-link to="/chi-siamo#top" class="list-link">Chi siamo</router-link></li>
-                <li><router-link to="/contattaci#top" class="list-link">Contattaci</router-link></li>
+                <li><a href="/" class="list-link" :hash="top">Home</a></li>
+                <li> <a href="/allevamento#top" class="list-link">Allevamento</a></li>
+                <li><a href="/pensione#top" class="list-link" :hash="top">Pensione</a></li>
+                <li><a href="/chi-siamo#top" class="list-link" :hash="top">Chi siamo</a></li>
+                <li><a href="/contattaci#top" class="list-link" :hash="top">Contattaci</a></li>
               </ul>
             </div>
           </div>
@@ -37,6 +44,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
+      top: "top",
     };
   },
   methods: {
@@ -62,6 +70,7 @@ export default {
 .logo {
   font-weight: bold;
   font-size: 24px;
+  margin-right: 5px;
 }
 
 .logo img {
@@ -89,6 +98,9 @@ export default {
 .list-link:hover {
   color: #F0A6A6;
 }
+.desktop-navbar {
+  display: none; /* Nascondi la navbar nella vista desktop */
+}
 
 @media (max-width: 767px) {
   .app-header {
@@ -112,6 +124,22 @@ export default {
 
   .accordion-body li {
     margin: 5px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .accordion {
+    display: none; /* Nascondi l'accordion nella vista desktop */
+  }
+
+  .desktop-navbar {
+    display: flex; /* Mostra la navbar nella vista desktop */
+    margin-left: auto;
+  }
+
+
+  .desktop-navbar .nav-link {
+    margin-left: 15px; /* Aggiungi spazio tra i link nella navbar */
   }
 }
 </style>

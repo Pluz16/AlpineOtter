@@ -5,6 +5,8 @@ import HomePage from '@/components/HomePage/HomePage.vue'
 import Pensione from '@/views/Pensione-Page.vue';
 import ContattaciPage from '@/views/Contattaci-Page.vue'
 import AboutUs from '@/views/AboutUs-Page.vue'
+import Cookie from '@/views/Cookie-Policy.vue'
+import Privacy from '@/views/Privacy-Policy.vue'
 
 const routes = [
   {
@@ -41,6 +43,19 @@ const routes = [
 
   { path: '/chi-siamo#ethics-section', 
   component: AboutUs },
+
+  {
+    path: '/cookies',
+    name: 'Cookie Policy',
+    component: Cookie,
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    component: Privacy,
+  },
+
+  
 
 
 ];

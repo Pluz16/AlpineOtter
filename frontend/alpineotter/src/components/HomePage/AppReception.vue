@@ -26,10 +26,10 @@ La nostra posizione privilegiata, vicina ai centri abitati, vi offre un'esperien
   }
   
   .btn {
-    background-color: #75B96A;
+    background-color: #1c5513;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #333;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;

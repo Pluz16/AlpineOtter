@@ -4,7 +4,7 @@
   <h2 class="pensione-title">Un Paradiso per i Vostri Amici a Quattro Zampe</h2>
   <div class="pensione-info">
     <div class="pensione-text">
-      <h3>Chi Siamo - La Nostra Filosofia</h3>
+      <h3>La Nostra Filosofia</h3>
       <p>
         Noi crediamo nell'eccellenza e nella qualità del servizio che offriamo.
         Per questo motivo, abbiamo scelto di mantenere un numero ridotto di ospiti,
@@ -50,17 +50,42 @@
   </div>
 
   <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Offriamo anche altri servizi!
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Su richiesta effettuiamo: Servizio di Dog-sitting a domicilio, asilo diurno e transfer per cani. Non esitare a chiedere info!</div>
+    <!-- Servizio di Dog-sitting a domicilio -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Servizio di Dog-sitting a domicilio
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Il nostro servizio di Dog-sitting a domicilio offre al tuo cane un ambiente familiare e confortevole mentre sei fuori casa. Abbiamo a cuore il benessere del tuo amico a quattro zampe e garantiamo cure amorevoli e professionali. Affidati a noi per tenere il tuo cane felice e coccolato durante la tua assenza!</div>
+      </div>
+    </div>
+
+    <!-- Asilo diurno per cani -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Asilo diurno per cani
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Il nostro asilo diurno per cani è il luogo perfetto per far socializzare il tuo amico peloso e garantirgli una giornata piena di divertimento e attività. I nostri professionisti qualificati si prenderanno cura del tuo cane mentre sei impegnato, offrendogli momenti di gioco, attività e tanto affetto. Il divertimento e la sicurezza del tuo cane sono la nostra priorità!</div>
+      </div>
+    </div>
+
+    <!-- Transfer per cani -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Transfer per cani
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Il nostro servizio di Transfer per cani ti permette di viaggiare serenamente sapendo che il tuo cane è in buone mani. Forniamo un trasporto sicuro e confortevole per il tuo amico peloso, garantendogli un viaggio senza stress. Affidati a noi per il transfer del tuo cane e goditi la tranquillità di viaggiare con la certezza che il tuo fedele compagno è al sicuro!</div>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="pensione-contact" id="contact">
     <h3>Vieni a Trovarci!</h3>
@@ -87,6 +112,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.pensione-container h1{
+  background-color: rgba(255, 228, 196, 0.634);
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .pensione-title {
@@ -181,6 +215,7 @@ h3 {
   font-weight: 700;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 
@@ -189,7 +224,15 @@ h3 {
 @media (max-width: 768px) {
 
   .pensione-info{
-    display: block;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pensione-info img{
+    height: 280px;
+    max-width: 100%;
   }
 
   .pensione-container{

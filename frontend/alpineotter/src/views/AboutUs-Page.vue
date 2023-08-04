@@ -1,7 +1,7 @@
-<template>
-    <div class="about-us-page" id="top">
+<template id="top">
+    <div class="about-us-page" >
       <div class="professionalita">
-        <h2>PROFESSIONALITA’</h2>
+        <h2>FOUNDER</h2>
         <p>
           Manuel Punta, diploma di maturità scientifica e laurea in scienze politiche.
           Allevatore iscritto al registro allevatori ENCI.
@@ -13,9 +13,9 @@
           Titolare suffisso ALPINE OTTER, registrato presso FCI/ENCI.
           Svolgo attività informativa presso centri cinofili, associazioni o enti locali
           sui seguenti temi:
-          L’allevamento etico
-          La razza labrador retriever
-          Il mondo degli show cinofili
+          L’allevamento etico,
+          La razza labrador retriever,
+          Il mondo degli show cinofili...
           Segnalo la mia partecipazione come docente al corso di formazione dei
           nuovi binomi per il soccorso alpino valdostano nel 2019.
           Da anni frequento il mondo delle expo e condivido coi miei cani attività di
@@ -41,7 +41,7 @@
     </div>
 
 
-      <div class="da-dove-veniamo">
+      <div class="da-dove-veniamo" id="salute">
         <h2>DA DOVE VENIAMO</h2>
         <p>
           La nostra passione per gli animali affonda negli insegnamenti di nonni e
@@ -55,8 +55,8 @@
     </div>
 
      <!-- Sezione "Etica dell'allevamento" - Salute -->
-     <div class="ethics-section" id="ethics-section">
-      <h2>Salute</h2>
+     <div class="ethics-section" id="salute">
+      <h2 id="ethics">Salute</h2>
       <p>
         La salute è un aspetto fondamentale sul quale basiamo la nostra selezione.
         Tutti i nostri cani sono testati ufficialmente per displasia (FSA/CELEMASCHE),
@@ -66,7 +66,7 @@
     </div>
 
     <!-- Sezione "Etica dell'allevamento" - Carattere -->
-    <div class="ethics-section">
+    <div class="ethics-section" id="carattere">
       <h2>Carattere</h2>
       <p>
         Un labrador non sarebbe tale senza una innata volontà di compiacere e spiccati tratti di socievolezza ed attitudine al gioco.
@@ -75,7 +75,7 @@
     </div>
 
     <!-- Sezione "Etica dell'allevamento" - Funzionalità -->
-    <div class="ethics-section">
+    <div class="ethics-section" id="funzionalita">
       <h2>Funzionalità</h2>
       <p>
         Prima di essere "bello" un labrador deve essere "funzionale".
@@ -115,6 +115,7 @@
 .da-dove-veniamo,
 .ethics-section {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .professionalita h2,
@@ -129,6 +130,7 @@
   object-fit: contain;
   width: 100%;
   height: 400px;
+  margin-bottom: 10px;
 }
 
 #carouselExampleSlidesOnly {

@@ -4,7 +4,7 @@
     <div class="slider-container">
       <div class="row">
         <div v-for="dog in dogs" :key="dog.id" class="col-md-2 col-sm-4">
-          <router-link to="/allevamento#dog-list" class="dog-card">
+          <a href="/allevamento#dog-list" class="dog-card">
             <div class="dog-image">
               <div class="circle-container">
                 <img :src="require(`@/assets/${dog.photo}`)" alt="Foto del cane" class="rounded-circle" />
@@ -14,7 +14,7 @@
               </div>
             </div>
             <h3 class="dog-name">{{ dog.name }}</h3>
-          </router-link>
+          </a>
         </div>
       </div>
     </div>

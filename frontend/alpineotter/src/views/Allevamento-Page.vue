@@ -4,40 +4,40 @@
     <h1 class="title">Benvenuti in Allevamento</h1>
     <p class="subtitle">L'eccellenza delle montagne nella selezione dei nostri cani</p>
   </div>
-  <img src="@/assets/mountains.png" alt="">
+ 
 </section>
 
 <section class="card-section">
   <div class="container">
     <h2 class="section-title">I nostri principi</h2>
     <div class="card-row">
-      <div class="card card-1" >
+      <div class="card card-1">
         <h4 class="card-text">SALUTE</h4>
-        <p class="card-text-description">
+        <a href="chi-siamo#salute" class="card-text-description">
           La salute è fondamentale per la nostra selezione. Tutti i nostri cani sono ufficialmente testati per displasia (FSA/CELEMASCHE) e sottoposti a un ricco pannello di test genetici LABOKLIN. I risultati sono disponibili per i clienti.
-          </p>
+        </a>
       </div>
       <div class="card card-2">
         <h4 class="card-text">CARATTERE</h4>
-        <p class="card-text-description" >
+        <a href="chi-siamo#carattere" class="card-text-description">
           Il carattere del Labrador è distintivo. La sua innata volontà di compiacere, socievolezza ed attitudine al gioco lo rendono facilmente addestrabile per attività specifiche.
-        </p>
+      </a>
       </div>
       <div class="card card-3">
         <h4 class="card-text">FUNZIONALITÀ</h4>
-        <p class="card-text-description" >
+        <a href="chi-siamo#funzionalita" class="card-text-description">
           Il Labrador è funzionale, con struttura solida, coda adatta al nuoto e fiuto eccellente.
-        </p>
+        </a>
       </div>
       <div class="card card-4">
         <h4 class="card-text">BELLEZZA</h4>
-        <p class="card-text-description" >
+        <a href="chi-siamo#bellezza" class="card-text-description">
           La nostra selezione privilegia cani non eccessivamente pesanti, aderenti allo standard e con risultati visibili nelle foto.
-        </p>
+        </a>
       </div>
     </div>
     <div class="center-link">
-        <a href="/chi-siamo#ethics-section" class="card-link">Scopri di più</a>
+        <a href="/chi-siamo#ethics" class="card-link">Scopri di più</a>
       </div>
   </div>
 
@@ -109,8 +109,8 @@
     </div>
   </section>
 
-  <section class="dog-list-section" >
-    <div class="container" id="dog-list">
+  <section class="dog-list-section" id="dog-list">
+    <div class="container" >
       <h2 class="section-title">I nostri cani</h2>
       <div class="dog-list">
         <div class="dog-item">
@@ -207,13 +207,14 @@
   /* background-image: url(@/assets/mountains.png); */
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("@/assets/mountains.png");
+  background-size: contain; /* Adatta l'immagine allo sfondo coprendo l'intera sezione */
+  background-position: center; /* Centra l'immagine nell'area dello sfondo */
 
 }
 
-.header-section img{
-  max-width: 400px;
 
-}
 
 .container-header{
   display: inline-block;
@@ -228,7 +229,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 10px;
-  background-color: rgba(255, 228, 196, 0.634);
+  background-color: rgba(255, 228, 196, 0.956);
 }
 
 .subtitle {
@@ -236,12 +237,12 @@
   text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
-  background-color: rgba(255, 228, 196, 0.596);
+  background-color: rgba(255, 228, 196, 0.905);
 }
 
 @media (max-width: 768px) {
-  .header-section img{
-  display: none;
+  .header-section {
+background-image: none;
 }
 }
 
@@ -252,6 +253,9 @@
 .card-section{
 
   margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Per distribuire le card uniformemente su una riga */
 }
 
 .card-text {
@@ -280,7 +284,7 @@
   position: relative; /* Aggiungi questa proprietà per consentire il posizionamento assoluto della descrizione */
 }
 .card {
-  flex: 0 0 25%;
+  flex: 0 0 24%; /* Ogni card occupa il 24% della larghezza su schermi con larghezza massima di 1200px */
   height: 200px;
   display: flex;
   align-items: center;
@@ -302,9 +306,7 @@
 
 
 
-.card-text:hover{
-  display: none;
-}
+
 
 .card::before {
   content: "";
@@ -398,7 +400,7 @@
   background-image: url('@/assets/Expo_Cuba_Head.jpg');
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
 
   .card {
     max-width: 250px; /* Riduci la larghezza massima della card su schermi più piccoli */
@@ -409,7 +411,7 @@
   .card-text-description {
   /* Resto dello stile per la descrizione */
   display: none;
-  font-size: 9px;
+  font-size: 7px;
   text-align: center;
   color: #000000;
   font-weight: 750;
@@ -430,29 +432,61 @@
     font-size: 15px; /* Riduci la dimensione del font su schermi più piccoli */
   }
 
+
+  .card:hover {
+    transform: none; /* Annulla la trasformazione al passaggio del mouse */
+    box-shadow: none; /* Annulla l'ombra al passaggio del mouse */
+    pointer-events: none; /* Impedisce l'interazione con la card al passaggio del mouse */
+  }
+  
+  .card-text:hover,
+  .card-text-description:hover {
+    display: none; /* Annulla l'effetto di hover sugli elementi con classe .card-text e .card-text-description */
+  }
 }
 
 @media (max-width: 576px) {
   .card {
-    max-width: 200px; /* Riduci ancora di più la larghezza massima della card su schermi ancora più piccoli */
-    height: 200px; /* Riduci ulteriormente l'altezza della card su schermi ancora più piccoli */
+    flex: 0 0 calc(48%); /* Calcola la larghezza per ospitare due elementi per riga con uno spazio tra di essi */
+    height: 205px; /* Riduci ulteriormente l'altezza della card su schermi ancora più piccoli */
     writing-mode: vertical-lr;
     text-orientation: upright;
+    margin-bottom: 15px;
+  }
+
+  .card-row{
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .card h4{
     font-size: small;
     display: flex;
+    font-weight: 900;
   }
 
   .card:hover .card-text-description{
     display: none;
   }
 
+  .card:hover {
+    transform: none; /* Annulla la trasformazione al passaggio del mouse */
+    box-shadow: none; /* Annulla l'ombra al passaggio del mouse */
+    pointer-events: none; /* Impedisce l'interazione con la card al passaggio del mouse */
+  }
+  
+  .card-text:hover,
+  .card-text-description:hover {
+    display: none; /* Annulla l'effetto di hover sugli elementi con classe .card-text e .card-text-description */
+  }
+
+
 
 
 
 }
+
+
 
 
 
@@ -491,10 +525,11 @@
   }
 
   .puppy-item img {
-    max-width: 100%;
+    width: 200px;
     border-radius: 10px;
     margin-bottom: 10px;
-    max-height: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 
   .puppy-item h3 {
@@ -697,6 +732,7 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 /* Stili aggiuntivi per il layout, puoi personalizzarli a tuo piacimento */

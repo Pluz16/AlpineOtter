@@ -7,12 +7,12 @@
         <p>Tel: +39 3421032437</p>
         <p><a href="https://www.facebook.com/alpineotter">https://www.facebook.com/alpineotter</a></p>
 
-        <p>Per informazioni su Allevamento, cuccioli di Labrador e adulti:
+        <p class="info">Per informazioni su Allevamento, cuccioli di Labrador e adulti:
         <a href="mailto:alpineotterlabs@gmail.com?subject=Breeding&body=Message">
           Scrivi qua
         </a>
         </p>
-        <p> Per informazioni su Pensione, Dog Sitting e Trasporti:
+        <p class="info"> Per informazioni su Pensione, Dog Sitting e Trasporti:
         <a href="mailto:alpineotterlabs@gmail.com?subject=Dog'sVillage&body=Message">
           Scrivi qua
         </a>
@@ -52,6 +52,9 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+}
+.contattaci-info{
+  text-align: center;
 }
 
 h1 {
@@ -105,6 +108,10 @@ p {
 
 p.error {
   color: red;
+}
+
+.info{
+  font-weight: 700;
 }
 
 
